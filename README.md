@@ -1,3 +1,3 @@
 # react-demo-projects
 
-React Showcase: A collection of projects highlighting React skills.
+React Typescript Showcase: A collection of projects highlighting React + Typescript skills.
