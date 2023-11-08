@@ -1,2 +1,3 @@
 # react-demo-projects
-A collection of react projects for react skills showcase.
+
+React Showcase: A collection of projects highlighting React skills.
