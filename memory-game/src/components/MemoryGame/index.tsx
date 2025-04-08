@@ -28,9 +28,70 @@ const MemoryGame = () => {
     setHasWon(false);
   };
 
-  const handleTileClick = () => {};
+  const handleTileClick = (tile: Tile) => {
+    if (
+      tile.isFlipped ||
+      tile.isMatched ||
+      isGameOver ||
+      flippedTiles.length === 2
+    )
+      return;
 
-  const handleGridChange = () => {};
+    const updatedTiles = tiles.map((t) =>
+      t.id === tile.id ? { ...t, isFlipped: true } : t
+    );
+
+    const updatedFlipped = [...flippedTiles, tile];
+
+    setTiles(updatedTiles);
+    setFlippedTiles(updatedFlipped);
+
+    if (updatedFlipped.length === 2) {
+      setTimeout(() => {
+        const [first, second] = updatedFlipped;
+
+        if (first.emoji === second.emoji) {
+          const matchedTiles = updatedTiles.map((t) =>
+            t.emoji === first.emoji ? { ...t, isMatched: true } : t
+          );
+          setTiles(matchedTiles);
+          setFlippedTiles([]);
+
+          const allMatched = matchedTiles.every((t) => t.isMatched);
+
+          if (allMatched) {
+            setWins((prev) => prev + 1);
+            setIsGameOver(true);
+            setHasWon(true);
+            setGamesPlayed((prev) => prev + 1);
+          }
+        } else {
+          setMovesLeft((prev) => {
+            const next = prev - 1;
+            if (next === 0) {
+              setIsGameOver(true);
+              setHasWon(false);
+              setGamesPlayed((prev) => prev + 1);
+            }
+            return next;
+          });
+
+          const revertedTiles = updatedTiles.map((t) =>
+            t.id === first.id || tile.id === second.id
+              ? { ...tile, isFlipped: true }
+              : t
+          );
+          setTimeout(() => setTiles(revertedTiles), 300);
+          setFlippedTiles([]);
+        }
+      }, 1000);
+    }
+  };
+
+  const handleGridChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const size = Math.min(8, Math.max(2, parseInt(e.target.value)));
+    setGridSize(size);
+  };
 
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">

@@ -17,7 +17,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
   return (
     <div
       className="grid gap-2 justify-center"
-      style={{ gridTemplateColumns: `repeat(${gridSize}, minmax940px, 1fr)` }}
+      style={{ gridTemplateColumns: `repeat(${gridSize}, minmax(40px, 1fr)` }}
     >
       {tiles.map((tile) => (
         <button
