@@ -9,17 +9,17 @@ interface GameBoardProps {
 }
 
 const GameBoard: React.FC<GameBoardProps> = ({
-  titles,
+  tiles,
   gridSize,
   isGameOver,
   onTileClick,
 }) => {
   return (
     <div
-      className="grid gap-2 justify-cener"
+      className="grid gap-2 justify-center"
       style={{ gridTemplateColumns: `repeat(${gridSize}, minmax940px, 1fr)` }}
     >
-      {titles.map((tile) => (
+      {tiles.map((tile) => (
         <button
           key={tile.id}
           className={`h-16 w-16 text-2xl flex items-center justify-center rounded shadow transitition ${
@@ -29,6 +29,8 @@ const GameBoard: React.FC<GameBoardProps> = ({
               ? 'bg-white'
               : 'bg-blue-300'
           }`}
+          onClick={() => onTileClick(tile)}
+          disabled={tile.isMatched || isGameOver}
         >
           {tile.isFlipped || tile.isMatched ? tile.emoji : '❓'}
         </button>
