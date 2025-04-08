@@ -1,4 +1,8 @@
-# React + Vite
+# Grid Lights
+
+Build a 3x3 gridl of light cells (omitting the center cell) where you can click on the cells to activate them, turning them green. Whe all the cells have been activated, they will be deactivated one by one in the reverse order they were activated with a 300ms internal in between.
+
+## Project Setup
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
