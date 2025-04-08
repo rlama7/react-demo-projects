@@ -1,4 +1,21 @@
-# React + TypeScript + Vite
+# Memory Game Overview
+
+The Memory Game is a tile-matching puzzle where:
+
+- You flip 2 tiles at a time.
+- If they match, they stay visible.
+- If they don't, they flib back.
+- You win when all pairs are matched before using all your moves.
+
+This version has following implementations:
+
+- A configurable grid (2x2 to 8x8)
+- Max 5 moves
+- Keeps win/loss score
+- Random fruit emoji tiles
+- A reset game option
+
+## Setup Insructions
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,15 +45,15 @@ export default tseslint.config({
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
 ```js
 // eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from 'eslint-plugin-react-x';
+import reactDom from 'eslint-plugin-react-dom';
 
 export default tseslint.config({
   plugins: {
@@ -50,5 +67,5 @@ export default tseslint.config({
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
-})
+});
 ```
