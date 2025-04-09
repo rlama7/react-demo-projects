@@ -9,9 +9,13 @@ import {
   getUserById,
   updateUser,
   deleteUser,
-} from '../controllers/userController';
+} from '../controllers/userController.js';
 
 const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.send("👋 Welcome to the User Microservice API'");
+});
 
 router.get('/health', getHealth);
 router.post('/users', createUser);

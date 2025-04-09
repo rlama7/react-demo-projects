@@ -7,9 +7,8 @@ This is a very basic UserService Microservices for Demo purposes. We'll utilizie
 ```
 microservices-demo/
 |
-├── server/ # <-- Core backend logic lives
+├── server/ # <-- Core backend logic lives here
 |
-here
 |
 │ ├── controllers/ # Route handlers /
 |
