@@ -1,0 +1,64 @@
+# -------------------
+# 🚧 Node & Yarn
+# -------------------
+node_modules/
+.pnp/
+.pnp.js
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.yarn/patches/
+
+# -------------------
+# 🔒 Env & Secrets
+# -------------------
+.env
+.env.*              # .env.dev, .env.production etc.
+config/config.env
+
+# -------------------
+# 🧪 Test Coverage
+# -------------------
+coverage/
+*.lcov
+
+# -------------------
+# 🏗 Build Artifacts
+# -------------------
+build/
+dist/
+dist-ssr/
+
+# -------------------
+# 🪵 Logs
+# -------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------
+# ⚙️ OS & Editor Junk
+# -------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*.sublime-workspace
+
+# VSCode / IntelliJ
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# -------------------
+# ⛔ System files
+# -------------------
+nohup.out
+.x
+*.local
