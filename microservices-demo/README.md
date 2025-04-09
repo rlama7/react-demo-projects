@@ -1,6 +1,8 @@
 # Microservices Demo
 
-Files and Folders Structure for the Microservices Following Best Practices:
+This is a very basic UserService Microservices for Demo purposes. We'll utilizie in Memory Database utilizing JavaScript native Map() for simplicity.
+
+## Files and Folders Structure for the Microservices Following Best Practices:
 
 ```
 microservices-demo/
@@ -36,3 +38,5 @@ here
 ├── nodemon.json
 └── README.md
 ```
+
+##
