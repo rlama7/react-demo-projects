@@ -1,0 +1,28 @@
+.grid-lights {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 4rem;
+  border: 2px solid #e7dede;
+  border-radius: 20px;
+  width: 500px;
+  height: auto;
+}
+
+.grid-lights-box {
+  width: 150px;
+  height: 150px;
+  background: #e7dede;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-lights-box:nth-child(5) {
+  /* display: none; */
+  visibility: hidden;
+}
