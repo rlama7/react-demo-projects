@@ -30,6 +30,7 @@ microservices-demo/
 |
 │ └── index.js # App entry point
 │
+├── Dockerfile
 ├── .env # Env vars (never commit!)
 ├── .gitignore
 ├── package.json
